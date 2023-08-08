@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.3;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.drawer {
+  width: 85%;
+  height: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #262626;
+  -webkit-clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+}
+
+.folder {
+  position: absolute;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  transform: translateX(-50%);
+}
+.folder-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 0 1rem 1rem 1rem;
+  background-color: #262626;
+  transition: transform 0.4s;
+}
+.folder-cover::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -41px;
+  width: 35%;
+  height: 40px;
+  border: 1px solid #fff;
+  border-bottom: 0;
+  border-radius: 0.6rem 0.6rem 0 0;
+  background-color: #262626;
+}
+.folder-cover:hover {
+  background-color: #ffffff;
+}
+.folder-cover:hover::before {
+  background-color: #ffffff;
+}
+.folder .paper {
+  width: 90%;
+  height: 90%;
+  background-color: wheat;
+  transition: margin-top 0.4s;
+}
+.folder-on .folder-cover {
+  transform: skewX(3deg);
+  transform-origin: bottom;
+  background-color: #fff;
+}
+.folder-on .folder-cover::before {
+  background-color: #fff;
+}
+.folder-on .paper {
+  margin-top: -5%;
+}/*# sourceMappingURL=style.css.map */
